@@ -1,0 +1,21 @@
+{
+  "build": {
+    "env": {
+      "DATABASE_URL": "@seri-ghanial-database-url",
+      "NEXTAUTH_SECRET": "@seri-ghanial-nextauth-secret",
+      "NEXTAUTH_URL": "@seri-ghanial-nextauth-url",
+      "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY": "@seri-ghanial-clerk-publishable-key",
+      "CLERK_SECRET_KEY": "@seri-ghanial-clerk-secret-key",
+      "SENDGRID_API_KEY": "@seri-ghanial-sendgrid-api-key",
+      "EMAIL_FROM": "@seri-ghanial-email-from",
+      "NEXT_PUBLIC_SITE_NAME": "@seri-ghanial-site-name"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/",
+      "methods": ["GET", "POST", "PUT", "DELETE"]
+    }
+  ]
+}
