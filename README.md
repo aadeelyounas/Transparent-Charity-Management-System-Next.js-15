@@ -1,87 +1,68 @@
-# Seri Ghanial Charity Management System
+# Transparent Charity Management System (Next.js 15)
 
-A modern, mobile-first, responsive Next.js 15 application for managing charity donations and distributions.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+A modern, mobile-first, responsive Next.js 15 application for managing charity organizations with complete transparency and security.
 
 ## Features
 
-- Secure authentication and role-based access control
-- User dashboard with donation history and distribution transparency
-- Admin panel for managing users, donations, and distributions
-- Email notifications for donations and distributions
-- Financial reporting and analytics
+- **User Roles**
+  - Donors can:
+    - View their donation history
+    - See transparent distribution records
+  - Admins can:
+    - Manage users and donations
+    - Track fund distributions
+    - Generate financial reports
 
-## Tech Stack
-
-- Next.js 15
-- React 18+
-- Tailwind CSS
-- PostgreSQL
-- NextAuth.js
-- SendGrid (for email notifications)
-- Clerk (for authentication)
+- **Modern Tech Stack**
+  - Next.js 15 with React 18+
+  - Tailwind CSS for styling
+  - PostgreSQL database
+  - NextAuth.js authentication
+  - TypeScript support
 
 ## Getting Started
 
 ### Prerequisites
-
 - Node.js 18+
-- PostgreSQL database
-- SendGrid API key
-- Clerk authentication keys
+- PostgreSQL
+- Git
 
 ### Installation
+1. Clone the repository
+```bash
+git clone https://github.com/aadeelyounas/transparent-charity-management-system-nextjs15.git
+cd transparent-charity-management-system-nextjs15
+```
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/seri-ghanial.git
-   cd seri-ghanial
-   ```
+2. Install dependencies
+```bash
+npm install
+```
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+3. Set up environment variables
+```bash
+cp .env.example .env
+# Update the .env file with your credentials
+```
 
-3. Set up environment variables:
-   - Copy `.env.example` to `.env`
-   - Fill in the required values
+4. Run database migrations
+```bash
+npx prisma migrate dev
+```
 
-4. Run database migrations:
-   ```bash
-   npx prisma migrate dev --name init
-   ```
-
-5. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-6. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Deployment
-
-### Vercel
-
-1. Install Vercel CLI:
-   ```bash
-   npm install -g vercel
-   ```
-
-2. Deploy:
-   ```bash
-   vercel
-   ```
-
-3. Set up environment variables in the Vercel dashboard using the same keys as in `.env.example`
+5. Start the development server
+```bash
+npm run dev
+```
 
 ## Contributing
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+We welcome contributions! Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Distributed under the MIT License. See `LICENSE` for more information.
+## Acknowledgments
+- Inspired by the need for transparent charity management systems
+- Built with ❤️ by the open source community
