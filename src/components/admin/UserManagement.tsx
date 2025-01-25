@@ -60,8 +60,8 @@ export default function UserManagement({ users }: UserManagementProps) {
               onClick={() => setSelectedUser(user)}
             >
               <div>
-                <p className="font-medium">{user.name || user.email}</p>
-                <p className="text-sm text-gray-500">{user.role}</p>
+                <p className="font-medium text-gray-900">{user.name || user.email}</p>
+                <p className="text-sm text-gray-700">{user.role}</p>
               </div>
             </button>
             <button

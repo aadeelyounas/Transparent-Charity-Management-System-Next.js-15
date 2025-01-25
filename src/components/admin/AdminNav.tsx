@@ -13,7 +13,7 @@ export default function AdminNav() {
           <div className="flex space-x-8">
             <Link 
               href="/admin/users"
-              className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-black hover:border-gray-300"
+              className="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium text-text hover:border-gray-300 hover:text-text-dark"
             >
               User Management
             </Link>

@@ -29,7 +29,9 @@ export default function EditDonationForm({ donation, isCreate = false, onClose }
     method: donation?.method || "",
     transactionId: donation?.transactionId || "",
     userId: donation?.userId || 0,
-    date: donation?.date.toISOString().split('T')[0] || new Date().toISOString().split('T')[0]
+    date: donation?.date ?
+      (typeof donation.date === 'string' ? donation.date : donation.date.toISOString().split('T')[0])
+      : new Date().toISOString().split('T')[0]
   });
   const [users, setUsers] = useState<User[]>([]);
 
@@ -86,7 +88,7 @@ export default function EditDonationForm({ donation, isCreate = false, onClose }
           id="amount"
           value={formData.amount}
           onChange={(e) => setFormData({ ...formData, amount: Number.parseFloat(e.target.value) })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900"
           required
           step="0.01"
         />

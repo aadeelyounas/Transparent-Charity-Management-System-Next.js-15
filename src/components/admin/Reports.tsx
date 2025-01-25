@@ -37,7 +37,7 @@ export default function Reports({ donations, distributions }: ReportsProps) {
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
             .slice(0, 10)
             .map((item) => (
-              <div key={item.id} className="border-b pb-2">
+              <div key={`${'userId' in item ? 'donation-' : 'distribution-'}${item.id}`} className="border-b pb-2">
                 <div className="flex justify-between">
                   <div>
                     <p className="font-medium">

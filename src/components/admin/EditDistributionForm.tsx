@@ -21,7 +21,9 @@ export default function EditDistributionForm({ distribution, isCreate = false, o
     beneficiary: distribution?.beneficiary || "",
     amount: distribution?.amount || 0,
     purpose: distribution?.purpose || "",
-    date: distribution?.date.toISOString().split('T')[0] || new Date().toISOString().split('T')[0]
+    date: distribution?.date ?
+      (typeof distribution.date === 'string' ? distribution.date : distribution.date.toISOString().split('T')[0])
+      : new Date().toISOString().split('T')[0]
   });
 
   const mutation = useMutation({
@@ -66,7 +68,7 @@ export default function EditDistributionForm({ distribution, isCreate = false, o
           id="beneficiary"
           value={formData.beneficiary}
           onChange={(e) => setFormData({ ...formData, beneficiary: e.target.value })}
-          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm"
+          className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 sm:text-sm text-gray-900"
           required
         />
       </div>
